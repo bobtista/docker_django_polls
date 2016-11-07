@@ -7,10 +7,11 @@ machine:
   timezone:
     America/Los_Angeles # Set the timezone
 
-dependencies:
-  pre:
-    - pip install -r django-polls/requirements.txt
-
 general:
   build_dir: django-polls
+
+dependencies:
+  pre:
+    - pip install -r ./requirements.txt
+
 
