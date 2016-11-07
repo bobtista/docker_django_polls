@@ -10,7 +10,6 @@ machine:
 dependencies:
   pre:
     - pip install -r /srv/django-polls/requirements.txt
-    - docker build -t bobtista/docker-django-polls:latest .
 
 test:
   post:
