@@ -2,7 +2,7 @@
 machine:
 
   services:
-    - docker
+    # - docker
 
   timezone:
     America/Los_Angeles # Set the timezone
@@ -14,5 +14,5 @@ dependencies:
 test:
   post:
     # - docker run -d -p 8000:8000 bobtista/docker-django-polls:latest; sleep 10
-    - docker-compose up -d
-    - curl --retry 10 --retry-delay 5 -v http://localhost:8000/polls
+    # - docker-compose up -d
+    # - curl --retry 10 --retry-delay 5 -v http://localhost:8000/polls
