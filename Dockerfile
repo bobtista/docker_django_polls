@@ -23,10 +23,8 @@ ENV POLLS_SRVPROJ=/srv/django-polls
 WORKDIR $POLLS_SRVHOME
 RUN mkdir logs
 
-# Copy code over
-COPY $POLLS_SRC $POLLS_SRVPROJ
-
 # Install requirements
+COPY $POLLS_SRC/requirements.txt $POLLS_SRVPROJ/requirements.txt
 RUN pip install -r $POLLS_SRVPROJ/requirements.txt
 
 VOLUME ["$POLLS_SRVHOME/logs/"]
@@ -35,6 +33,6 @@ VOLUME ["$POLLS_SRVHOME/logs/"]
 EXPOSE 8000
 
 # Copy entrypoint script into the image
-WORKDIR $POLLS_SRVPROJ
-COPY ./docker-entrypoint.sh /
-ENTRYPOINT ["/docker-entrypoint.sh"]
+# WORKDIR $POLLS_SRVPROJ
+# COPY ./docker-entrypoint.sh /
+# ENTRYPOINT ["/docker-entrypoint.sh"]
