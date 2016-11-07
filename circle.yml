@@ -12,6 +12,6 @@ general:
 
 dependencies:
   pre:
-    - pip install -r ./requirements.txt
+    - pip install -r ./django-polls/requirements.txt
 
 
