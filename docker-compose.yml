@@ -1,4 +1,7 @@
 version: '2'
+machine:
+  - curl -sSL https://s3.amazonaws.com/circle-downloads/install-circleci
+  - pip install docker-compose==1.8.0
 services:
  db:
    image: postgres
